@@ -1,4 +1,31 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-.command-button:hover {
-    -fx-background-color: red;
+.number_class{
+	-fx-background-radius : 5;
+	-fx-background-color:  #523d2a;
+}
+.number_class:hover{
+	-fx-background-color:  #6a5036;
+}
+.number_class:pressed{
+	-fx-background-color:  #3f2f1f;
+}
+.command-button{
+	-fx-background-radius : 5;
+	-fx-background-color:   #857e68;
+}
+.command-button:hover{
+	-fx-background-color: #8f826b;
+}
+.command-button:pressed{
+	-fx-background-color: #706b58;
+}
+.operation_button{
+	-fx-background-radius : 5;
+	-fx-background-color: #eeaf5e;
+}
+.operation_button:hover{
+	-fx-background-color: #f3ba6d;
+}
+.operation_button:pressed{
+	-fx-background-color: #d9994f;
 }

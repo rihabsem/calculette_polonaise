@@ -74,18 +74,18 @@
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="32.0" prefWidth="200.0">
+            <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="typer" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="300.0" text="0.0" textFill="WHITE">
+                  <Label fx:id="typer" prefHeight="27.0" prefWidth="255.0" text="0.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <padding>
-                        <Insets right="10.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
                   </Label>
                </children>
             </HBox>
@@ -112,75 +112,67 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="sept" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="7" textFill="#f8f7f7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Label fx:id="sept" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="7" textFill="#f8f7f7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="huit" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Label fx:id="huit" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="neuf" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Label fx:id="neuf" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="quatre" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="4" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Label fx:id="quatre" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="4" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="cinq" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Label fx:id="cinq" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="six" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Label fx:id="six" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="un" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="1" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Label fx:id="un" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="1" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="deux" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Label fx:id="deux" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="trois" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Label fx:id="trois" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="zero" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                        <Label fx:id="zero" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="0" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="virgule" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="," textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                        <Label fx:id="virgule" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="," textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="egale" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #523d2a; -fx-background-radius: 5;" text="=" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                        <Label fx:id="oppo" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="number_class" text="+/-" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ac" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #857e68; -fx-background-radius: 5;" styleClass="command-button" text="AC" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label fx:id="c" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #857e68; -fx-background-radius: 5;" styleClass="command-button" text="C" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Label fx:id="ac" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="command-button" text="AC" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -188,7 +180,15 @@
                               <Insets />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="swap" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #857e68; -fx-background-radius: 5;" styleClass="command-button" text="SWAP" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Label fx:id="c" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="command-button" text="C" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="swap" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="command-button" text="SWAP" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -210,7 +210,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="next" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #857e68; -fx-background-radius: 5;" styleClass="command-button" text="NEXT" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Label fx:id="next" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="command-button" text="NEXT" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -218,7 +218,7 @@
                               <Insets />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="mul" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #eeaf5e; -fx-background-radius: 5;" text="*" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Label fx:id="mul" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="operation_button" text="*" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -226,7 +226,7 @@
                               <Insets />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="moin" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #eeaf5e; -fx-background-radius: 5;" text="-" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                        <Label fx:id="moin" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="operation_button" text="-" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -234,7 +234,7 @@
                               <Insets />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="plus" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #eeaf5e; -fx-background-radius: 5;" text="+" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Label fx:id="plus" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="operation_button" text="+" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -242,7 +242,7 @@
                               <Insets />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="div" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: #eeaf5e; -fx-background-radius: 5;" text="/" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                        <Label fx:id="div" alignment="CENTER" prefHeight="50.0" prefWidth="63.0" styleClass="operation_button" text="/" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

@@ -28,15 +28,19 @@ public class CalculatorControler implements CalculatorControlerInterface{
         ((CalculatorGUI)view).getHuit().setOnMouseClicked(this::click_eight);
         ((CalculatorGUI)view).getNeuf().setOnMouseClicked(this::click_nine);
         ((CalculatorGUI)view).getAc().setOnMouseClicked(this::click_AC);
-        //((CalculatorGUI)view).getAc().setOnMouseClicked(this::click_C);
-        //((CalculatorGUI)view).getAc().setOnMouseClicked(this::click_SWAP);
+        ((CalculatorGUI)view).getC().setOnMouseClicked(this::click_C);
+        ((CalculatorGUI)view).getSwap().setOnMouseClicked(this::click_swap);
         ((CalculatorGUI)view).getNext().setOnMouseClicked(this::change);
         ((CalculatorGUI)view).getPlus().setOnMouseClicked(this::change_op);
         ((CalculatorGUI)view).getMoin().setOnMouseClicked(this::change_op);
         ((CalculatorGUI)view).getMul().setOnMouseClicked(this::change_op);
         ((CalculatorGUI)view).getDiv().setOnMouseClicked(this::change_op);
+        ((CalculatorGUI)view).getVirgule().setOnMouseClicked(this::click_virgule);
+        ((CalculatorGUI)view).getZero().setOnMouseClicked(this::click_zero);
+        ((CalculatorGUI)view).getOppo().setOnMouseClicked(this::click_oppo);
         
     }
+	
 	
 	public void change_op(javafx.scene.input.MouseEvent event) {
 		//responsable d'indiquer au modele de realiser les operations
@@ -44,18 +48,34 @@ public class CalculatorControler implements CalculatorControlerInterface{
 		char op = opSymbol.charAt(0);
 		if(op == '+') {
 			result = model.add();
+			view.change(result);
+			model.push(result);
 		}
 		else if(op == '-') {
 			result = model.substract();
+			view.change(result);
+			model.push(result);
 		}
 		else if(op == '*') {
 			result = model.multiply();
+			view.change(result);
+			model.push(result);
 		}
 		else{
 			result = model.divide();
+			if(result == 2) {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+			    alert.setTitle("Cant divide by 0");
+			    alert.setHeaderText("Division ERROR");
+			    alert.setContentText("The divider is equal to 0");
+			    alert.showAndWait();
+			}
+			else {
+				view.change(result);
+				model.push(result);
+			}
 		}
-		view.change(result);
-		model.push(result);
+		
 		
 	}
 	
@@ -68,8 +88,6 @@ public class CalculatorControler implements CalculatorControlerInterface{
 			Alert alert = new Alert(Alert.AlertType.INFORMATION);
 		    alert.setTitle("Stack Contents");
 		    alert.setHeaderText("Current Stack State");
-
-		    // Convert the stack to a readable string
 		    alert.setContentText(model.getAccu().toString());
 
 		    alert.showAndWait();
@@ -113,13 +131,54 @@ public class CalculatorControler implements CalculatorControlerInterface{
 		if(view.getTyper().getText().equals("0.0")) view.getTyper().setText("9");
 		else view.getTyper().setText(view.getTyper().getText() + "9");
 	}
-	public void click_AC(javafx.scene.input.MouseEvent event) {
-		view.getTyper().setText("");
-		view.change(model.pop());
-	}
 	public void click_zero(javafx.scene.input.MouseEvent event) { 
-		view.getTyper().setText("0"); 
+		if(view.getTyper().getText().equals("0.0")) view.getTyper().setText("0");
+		else view.getTyper().setText(view.getTyper().getText() + "0");
 		}
+	public void click_virgule(javafx.scene.input.MouseEvent event) {
+		if(view.getTyper().getText().matches("-?\\d+\\.\\d+")) {
+			Alert alert = new Alert(Alert.AlertType.ERROR);
+		    alert.setTitle("Cant add comma");
+		    alert.setHeaderText("ERROR");
+		    alert.setContentText("Can't add another comma to your number");
+		    alert.showAndWait();
+		}
+		else {
+			view.getTyper().setText(view.getTyper().getText() + ".");
+		}
+	}
+	public void click_AC(javafx.scene.input.MouseEvent event) {
+		model.dropAll();
+		view.getTyper().setText("");
+		view.getHist1().setText("");
+		view.getHist2().setText("");
+		view.getHist3().setText("");
+		view.getHist4().setText("");
+	}
+	public void click_oppo(javafx.scene.input.MouseEvent event) {
+		//the sign switches for the current number in the typer before it goes into the stack
+		double a = Double.valueOf(view.getTyper().getText());
+		a = -a;
+		view.getTyper().setText(String.valueOf(a));
+	}
 	
+	public void click_swap(javafx.scene.input.MouseEvent event) {
+		model.swap();
+		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+	    alert.setTitle("Stack Contents");
+	    alert.setHeaderText("Current Stack State");
+	    alert.setContentText(model.getAccu().toString());
+
+	    alert.showAndWait();
+	}
+	public void click_C(javafx.scene.input.MouseEvent event) {
+		model.drop();
+		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+	    alert.setTitle("Stack Contents");
+	    alert.setHeaderText("Current Stack State");
+	    alert.setContentText(model.getAccu().toString());
+
+	    alert.showAndWait();
+	}
 
 }

@@ -18,6 +18,10 @@ public class CalculatorGUI extends BorderPane implements CalculatorGUIInterface{
 	@FXML
 	private Label typer;
 	@FXML
+	private Label op;
+	@FXML
+	private Label num2;
+	@FXML
 	private Label hist1;
 	@FXML
 	private Label hist2;
@@ -55,6 +59,10 @@ public class CalculatorGUI extends BorderPane implements CalculatorGUIInterface{
     private Label mul;
     @FXML 
     private Label div;
+    @FXML
+    private Label oppo;
+    @FXML
+    private Label virgule;
 	public CalculatorGUI() {
 	    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Sample.fxml"));
 	    fxmlLoader.setRoot(this);
@@ -217,6 +225,30 @@ public class CalculatorGUI extends BorderPane implements CalculatorGUIInterface{
 	}
 	public void setDiv(Label div) {
 		this.div = div;
+	}
+	public Label getOp() {
+		return op;
+	}
+	public void setOp(Label op) {
+		this.op = op;
+	}
+	public Label getNum2() {
+		return num2;
+	}
+	public void setNum2(Label num2) {
+		this.num2 = num2;
+	}
+	public Label getOppo() {
+		return oppo;
+	}
+	public void setOppo(Label oppo) {
+		this.oppo = oppo;
+	}
+	public Label getVirgule() {
+		return virgule;
+	}
+	public void setVirgule(Label virgule) {
+		this.virgule = virgule;
 	}
 	
 

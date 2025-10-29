@@ -29,7 +29,7 @@ public class CalculatorModel implements CalculatorModelInterface{
 		
 		a = pop();
 		b = pop();
-		return b-a;
+		return a-b;
 	}
 	public double multiply() {
 		a = pop();
@@ -39,28 +39,35 @@ public class CalculatorModel implements CalculatorModelInterface{
 	public double divide() {
 		a=pop();
 		b=pop(); 
-		return b/a;
+		if(b == 0) return 2;
+		return a/b;
 	}
-	public void drop() {
+	public void drop() { //deletes the last element in the stack 
 		accu.pop();
 	}
 	public void dropAll() {
 		accu.clear();
 	}
 	public void swap() {
-		a = pop();
-		b = pop();
-		accu.push(a);
-		accu.push(b);
+		//first number X then Y the stack will look like [X,Y]
+		//the operation will be Y op X
+		//this function's purpose is to switch the places of the number so it becomes : X op Y
+		a = pop(); //Y
+		b = pop(); //X
+		push(a);
+		push(b);
 		
 	}
 	public double opposite() {
 		a = pop();
 		return -a;
 	}
-	/* public void clear(){}
-	 * 
-	 */
+	public void clear(){
+		//vide l'accumulateur ==> dernier colonne dans la pile
+		
+	}
+	 
+	 
 
 	public Stack<Double> getAccu() {
 		return accu;

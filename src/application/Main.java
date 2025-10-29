@@ -22,7 +22,7 @@ public class Main extends Application {
 
             // 4. Optional: add stylesheet
             System.out.println("CSS path: " + getClass().getResource("application.css"));
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
             // 5. Show the stage
             primaryStage.setScene(scene);
